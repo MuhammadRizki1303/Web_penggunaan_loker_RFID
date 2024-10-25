@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Penggunaan Loker Berbasis ID</title>
+    <style>
+      /* Tema warna dan background dengan animasi */
+      body {
+        background: linear-gradient(45deg, #ff7f50, #6a5acd, #ffffff);
+        background-size: 300% 300%;
+        animation: gradientBG 10s ease infinite;
+        font-family: Arial, sans-serif;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      @keyframes gradientBG {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      /* Kontainer Kartu dengan animasi */
+      .card-container {
+        max-width: 600px;
+        width: 90%;
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        animation: slideIn 1s ease forwards;
+      }
+
+      @keyframes slideIn {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Header dan Logo */
+      header {
+        background-color: #6a5acd;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        animation: fadeIn 1s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Gaya Logo Lingkaran */
+      .logo {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .title-container:hover .logo {
+        transform: scale(1.1) rotate(360deg);
+      }
+
+      h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      /* Styling Sections */
+      main section {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeInUp 0.8s ease;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        color: #6a5acd;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+
+      ol,
+      ul {
+        text-align: left;
+        margin: 15px 0 0 20px;
+      }
+
+      ol li,
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Tombol */
+      .btn-primary,
+      .btn-dashboard,
+      a.dashboard-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        animation: scaleUp 0.6s ease both;
+      }
+
+      @keyframes scaleUp {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .btn-primary {
+        background-color: #6a5acd;
+      }
+
+      .btn-primary:hover {
+        background-color: #ff7f50;
+        transform: scale(1.05);
+      }
+
+      .btn-dashboard,
+      a.dashboard-btn {
+        background-color: #ff7f50;
+      }
+
+      .btn-dashboard:hover,
+      a.dashboard-btn:hover {
+        background-color: #6a5acd;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <header>
+        <div class="title-container">
+          <img src="logo.png" alt="Logo Kiri" class="logo" />
+          <h1>Tutorial Penggunaan Loker Berbasis ID</h1>
+        </div>
+      </header>
+      <main>
+        <section class="tutorial">
+          <h2>Cara Menggunakan Loker</h2>
+          <ol>
+            <li>Pastikan loker anda benar.</li>
+            <li>Scan card Anda ke mesin loker.</li>
+            <li>Tunggu sampai mesin membaca card anda.</li>
+            <li>
+              Pastikan Anda mengunci loker dengan benar setelah menaruh barang
+              Anda.
+            </li>
+            <li>Simpan card yang diberikan untuk membuka loker nanti.</li>
+          </ol>
+        </section>
+
+        <section class="rules">
+          <h2>Larangan</h2>
+          <ul>
+            <li>
+              Dilarang menaruh barang berbahaya atau terlarang di dalam loker.
+            </li>
+            <li>Dilarang membiarkan loker dalam keadaan terbuka.</li>
+            <li>Dilarang menaruh barang milik orang lain tanpa izin.</li>
+          </ul>
+        </section>
+
+        <section class="penalty">
+          <h2>Hukuman</h2>
+          <p>
+            Pelanggaran terhadap larangan yang telah ditentukan akan dikenakan
+            hukuman sebagai berikut:
+          </p>
+          <ul>
+            <li>Peringatan resmi dari pihak keamanan.</li>
+            <li>Pencabutan akses penggunaan loker sementara atau permanen.</li>
+            <li>Pelaporan kepada pihak berwenang untuk kasus yang serius.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
